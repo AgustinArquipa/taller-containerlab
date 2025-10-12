@@ -3,14 +3,15 @@ name: labtaller
 topology:
   nodes:
   
-    switch-core:
+    router-cisco:
       kind: cisco_iol
-      image: docker.io/arthurk99/cisco-iol-l2:17.15.01
+      image: docker.io/arthurk99/cisco-iol:17.15.01
       #startup-config: configs/config.partial
              
     switch-acceso:
       kind: cisco_iol
       image: docker.io/arthurk99/cisco-iol-l2:17.15.01
+      type: l2
       #startup-config: configs/config.partial
 
     PC1:
@@ -45,7 +46,7 @@ topology:
            
 
   links:
-    - endpoints: ["switch-core:Ethernet0/1","switch-acceso:Ethernet0/1"]    
+    - endpoints: ["router-cisco:Ethernet0/1","switch-acceso:Ethernet0/1"]    
     - endpoints: ["PC1:eth1","switch-acceso:Ethernet0/2"]
       mtu: 1500
     - endpoints: ["PC2:eth1","switch-acceso:Ethernet0/3"]

@@ -1,0 +1,11 @@
+conf t
+vlan 10
+exit
+ip dhcp pool vlan10
+network 10.0.0.0 255.255.255.0
+default-router 10.0.0.1
+exit
+interface vlan 10
+ip address 10.0.0.1 255.255.255.0
+no shut
+exit

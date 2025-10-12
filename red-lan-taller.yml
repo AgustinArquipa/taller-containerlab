@@ -11,7 +11,7 @@ topology:
     switch-arista:
       kind: arista_ceos
       image: docker.io/arthurk99/arista-ceos:4.30.2F
-      #startup-config: switch/config.partial
+      #startup-config: switch/myconfig.conf
 
     PC1:
       kind: linux # "Alpine Linux v3.12"
@@ -45,10 +45,10 @@ topology:
            
 
   links:
-    - endpoints: ["router-cisco:Ethernet0/1","switch-acceso:Ethernet0/1"]    
-    - endpoints: ["PC1:eth1","switch-acceso:Ethernet0/2"]
+    - endpoints: ["router-cisco:Ethernet0/1","switch-arista:eth1"]    
+    - endpoints: ["PC1:eth1","switch-arista:eth2"]
       mtu: 1500
-    - endpoints: ["PC2:eth1","switch-acceso:Ethernet0/3"]
+    - endpoints: ["PC2:eth1","switch-arista:eth2"]
       mtu: 1500
-    - endpoints: ["PC3:eth1","switch-acceso:Ethernet1/0"]
+    - endpoints: ["PC3:eth1","switch-arista:eth3"]
       mtu: 1500      

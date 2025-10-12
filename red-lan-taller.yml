@@ -12,7 +12,7 @@ topology:
       kind: cisco_iol
       image: docker.io/arthurk99/cisco-iol-l2:17.15.01
       type: l2
-      #startup-config: configs/config.partial
+      startup-config: acceso/configs/config.partial
 
     PC1:
       kind: linux # "Alpine Linux v3.12"

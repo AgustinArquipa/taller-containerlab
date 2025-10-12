@@ -48,7 +48,7 @@ topology:
     - endpoints: ["router-cisco:Ethernet0/1","switch-arista:eth1"]    
     - endpoints: ["PC1:eth1","switch-arista:eth2"]
       mtu: 1500
-    - endpoints: ["PC2:eth1","switch-arista:eth2"]
+    - endpoints: ["PC2:eth1","switch-arista:eth3"]
       mtu: 1500
-    - endpoints: ["PC3:eth1","switch-arista:eth3"]
+    - endpoints: ["PC3:eth1","switch-arista:eth4"]
       mtu: 1500      

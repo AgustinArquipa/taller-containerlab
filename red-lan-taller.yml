@@ -50,5 +50,5 @@ topology:
       mtu: 1500
     - endpoints: ["PC2:eth1","switch-acceso:Ethernet0/3"]
       mtu: 1500
-    - endpoints: ["PC3:eth1","switch-acceso:Ethernet0/4"]
+    - endpoints: ["PC3:eth1","switch-acceso:Ethernet1/0"]
       mtu: 1500      

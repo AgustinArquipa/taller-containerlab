@@ -5,7 +5,7 @@ topology:
   
     switch-core:
       kind: cisco_iol
-      image: docker.io/arthurk99/cisco-iol:17.15.01 
+      image: docker.io/arthurk99/cisco-iol-l2:17.15.01
       startup-config: configs/config.partial
              
     switch-acceso:

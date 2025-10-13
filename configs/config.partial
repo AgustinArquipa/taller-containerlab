@@ -9,5 +9,10 @@ exit
 interface ethernet 0/1
 no shut
 exit
+interface ethernet 0/2
+ip address 192.168.2.1 255.255.255.0
+no shut
+exit
+
 
 

@@ -2,7 +2,7 @@ conf t
 ipv6 unicast-routing
 interface ethernet 0/1.10
 encapsulation dot1Q 10
-ip address 10.0.0.1 255.255.255.0
+ip address 10.10.0.1 255.255.255.0
 no shut
 exit
 interface ethernet 0/1

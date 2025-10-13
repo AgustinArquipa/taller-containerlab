@@ -1,5 +1,6 @@
 conf t
 ipv6 unicast-routing
+ip routing
 interface ethernet 0/1.10
 encapsulation dot1Q 10
 ip address 10.10.0.1 255.255.255.0

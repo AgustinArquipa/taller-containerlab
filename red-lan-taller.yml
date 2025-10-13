@@ -6,7 +6,7 @@ topology:
     router-cisco:
       kind: cisco_iol
       image: docker.io/arthurk99/cisco-iol:17.15.01
-      #startup-config: configs/config.partial
+      startup-config: configs/config.partial
              
     switch-arista:
       kind: arista_ceos

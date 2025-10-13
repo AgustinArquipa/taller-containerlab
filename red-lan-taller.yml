@@ -42,10 +42,19 @@ topology:
        - chmod +x /root/dhcp-client.sh
        - bash /root/dhcp-client.sh
        - ip -6 route del default dev eth0
+
+    server-web:
+      kind: linux
+      image: docker.io/esanchezv/srvhttps:latest
+      exec:
+       - ip addr add 192.168.2.100/24 dev eth1
+       - ip route del default dev eth0
+       - ip route add default via 192.168.2.1   
            
 
   links:
-    - endpoints: ["router-cisco:Ethernet0/1","switch-arista:eth1"]    
+    - endpoints: ["router-cisco:Ethernet0/1","switch-arista:eth1"]
+    - endpoints: ["router-cisco:Ethernet0/2","server-web:eth1"]
     - endpoints: ["PC1:eth1","switch-arista:eth2"]
       mtu: 1500
     - endpoints: ["PC2:eth1","switch-arista:eth3"]

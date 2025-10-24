@@ -8,6 +8,7 @@
 [Learn more](https://containerlab.dev/manual/codespaces) about Containerlab for Codespaces.  
 <small>Machine type: 2 vCPU · 8 GB RAM</small>
 </div>
+
 ---
 * La topología creada provee un laboratorio de pruebas para la configuración de una red LAN IPv4 que conecta un dispositivo Switch Arista cEOS y un Router CISCO IOL
 ---

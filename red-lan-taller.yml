@@ -33,6 +33,7 @@ topology:
        - chmod +x /root/dhcp-client.sh
        - bash /root/dhcp-client.sh
        - ip -6 route del default dev eth0
+       - ip route del default dev eth0
           
     PC3: 
       kind: linux # "Alpine Linux v3.12"
@@ -43,6 +44,7 @@ topology:
        - chmod +x /root/dhcp-client.sh
        - bash /root/dhcp-client.sh
        - ip -6 route del default dev eth0
+       - ip route del default dev eth0
 
     server-web:
       kind: linux

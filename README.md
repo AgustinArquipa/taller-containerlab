@@ -11,6 +11,7 @@
 
 ---
 * La topología creada provee un laboratorio de pruebas para la configuración de una red LAN IPv4 que conecta un dispositivo Switch Arista cEOS y un Router CISCO IOL
+![Alt text](images/topo-lab-taller.png)
 ---
 ## Conexión a los nodos PC1, PC2, PC4
 * `docker exec -it clab-telemetria-PCx /bin/bash`

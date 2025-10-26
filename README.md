@@ -20,4 +20,6 @@
 * Archivo de configuración inicial Router Cisco: config.partial
 ---
 ## Conexión a los nodos
+* `docker exec -it clab-red-PCx /bin/bash`
+* Obtener dirección IP ejecutando: `dhcpcd eth1`
   

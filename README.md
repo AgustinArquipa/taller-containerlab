@@ -15,6 +15,9 @@
 ![Alt text](images/topo-lab-taller.png)
 
 ---
-## Conexión a los nodos PC1, PC2, PC4
-* `docker exec -it clab-telemetria-PCx /bin/bash`
-* Simular la conexión a la red ejecuntado: `ifconfig eth1 down` `ifconfig eth1 up`
+## Descripción de configuraciones
+* Se configura DHCP Server para VLAN 10 y VLAN 11 en Switch Arista. Archivo de configuración inicial: myconfig.conf
+* Archivo de configuración inicial Router Cisco: config.partial
+---
+## Conexión a los nodos
+  

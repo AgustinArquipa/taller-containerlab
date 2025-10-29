@@ -13,6 +13,11 @@ topology:
       image: docker.io/arthurk99/arista-ceos:4.30.2F
       startup-config: switch/myconfig.conf
 
+    switch-arista2:
+      kind: arista_ceos
+      image: docker.io/arthurk99/arista-ceos:4.30.2F
+      startup-config: switch/myconfig2.conf
+
     PC1:
       kind: linux # "Alpine Linux v3.12"
       image: ghcr.io/hellt/network-multitool
@@ -45,6 +50,9 @@ topology:
        - bash /root/dhcp-client.sh
        - ip -6 route del default dev eth0
        - ip route del default dev eth0
+    PC4: 
+      kind: linux # "Alpine Linux v3.12"
+      image: ghcr.io/hellt/network-multitool
 
     server-web:
       kind: linux
@@ -65,4 +73,9 @@ topology:
     - endpoints: ["PC2:eth1","switch-arista:eth3"]
       mtu: 1500
     - endpoints: ["PC3:eth1","switch-arista:eth4"]
-      mtu: 1500      
+      mtu: 1500
+    - endpoints: ["PC4:eth1","switch-arista:eth4"]
+      mtu: 1500
+
+
+      
